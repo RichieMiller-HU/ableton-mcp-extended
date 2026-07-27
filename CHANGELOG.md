@@ -12,6 +12,8 @@
 
 ### Changed
 
+- MCP SDK requirement is pinned to the patched stable 1.x series
+  (`>=1.28.1,<2`), with the dependency lock refreshed.
 - Remote Script binding defaults to loopback-only `127.0.0.1`.
 - Long-running command timeouts are preserved through response reads.
 - Minimum supported Ableton version is documented as Live 11.
