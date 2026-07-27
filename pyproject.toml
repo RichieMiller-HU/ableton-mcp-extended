@@ -1,25 +1,31 @@
 [project]
-name = "ableton-mcp"
-version = "1.2.0"
-description = "Ableton Live integration through the Model Context Protocol"
+name = "ableton-mcp-extended"
+version = "0.1.0"
+description = "Privacy-focused Ableton Live MCP derivative with extended editing and mixing tools"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-    {name = "Siddharth Ahuja", email = "ahujasid@gmail.com"}
+    {name = "Siddharth Ahuja", email = "ahujasid@gmail.com"},
+    {name = "RichieMiller-HU"},
 ]
-license = {text = "MIT"}
+license = "MIT"
 classifiers = [
+    "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 dependencies = [
     "mcp[cli]>=1.3.0",
-    "supabase>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "detect-secrets>=1.5.0",
+    "pytest>=8.0",
 ]
 
 [project.scripts]
-ableton-mcp = "MCP_Server.server:main"
+ableton-mcp-extended = "MCP_Server.server:main"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
@@ -29,5 +35,6 @@ build-backend = "setuptools.build_meta"
 packages = ["MCP_Server"]
 
 [project.urls]
-"Homepage" = "https://github.com/ahujasid/ableton-mcp"
-"Bug Tracker" = "https://github.com/ahujasid/ableton-mcp/issues"
+Homepage = "https://github.com/RichieMiller-HU/ableton-mcp-extended"
+Upstream = "https://github.com/ahujasid/ableton-mcp"
+Issues = "https://github.com/RichieMiller-HU/ableton-mcp-extended/issues"
